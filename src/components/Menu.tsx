@@ -29,7 +29,7 @@ const styles = (theme: Theme) => ({
 	}
 });
 
-interface MenuProps extends WithStyles<typeof styles> {
+interface MenuProps extends WithStyles<any> {
 	dateRange: DateRange;
 	ranges: DefinedRange[];
 	minDate: Date;
@@ -118,4 +118,4 @@ const Menu: React.FunctionComponent<MenuProps> = props => {
 	);
 };
 
-export default withStyles(styles)(Menu);
+export default withStyles(styles as any)(Menu);

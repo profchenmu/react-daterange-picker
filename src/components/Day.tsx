@@ -2,7 +2,6 @@ import * as React from "react";
 import {
 	IconButton,
 	Typography,
-	createStyles,
 	Theme,
 	WithStyles,
 	withStyles
@@ -76,7 +75,7 @@ const Day: React.FunctionComponent<DayProps> = props => {
 				onClick={props.onClick}
 				onMouseOver={props.onHover}>
 				<Typography
-					color={!props.disabled ? "default" : "textSecondary"}
+					color={!props.disabled ? "primary" : "secondary"}
 					className={combine(
 						classes.buttonText,
 						!props.disabled && props.filled && classes.contrast

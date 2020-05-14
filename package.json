@@ -1,5 +1,5 @@
 {
-	"name": "profchenmu/react-daterange-picker",
+	"name": "@profchenmu/react-daterange-picker",
 	"version": "1.0.5",
 	"description": "A react date range picker using Material Design",
 	"author": {

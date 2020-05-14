@@ -4,7 +4,6 @@ import {
 	Grid,
 	Typography,
 	Divider,
-	createStyles,
 	WithStyles,
 	Theme,
 	withStyles
@@ -16,20 +15,19 @@ import DefinedRanges from "./DefinedRanges";
 import { DateRange, DefinedRange, Setter, NavigationAction } from "../types";
 import { MARKERS } from "..";
 
-const styles = (theme: Theme) =>
-	createStyles({
-		header: {
-			padding: "20px 70px"
-		},
-		headerItem: {
-			flex: 1,
-			textAlign: "center"
-		},
-		divider: {
-			borderLeft: `1px solid ${theme.palette.action.hover}`,
-			marginBottom: 20
-		}
-	});
+const styles = (theme: Theme) => ({
+	header: {
+		padding: "20px 70px"
+	},
+	headerItem: {
+		flex: 1,
+		textAlign: "center"
+	},
+	divider: {
+		borderLeft: `1px solid ${theme.palette.action.hover}`,
+		marginBottom: 20
+	}
+});
 
 interface MenuProps extends WithStyles<typeof styles> {
 	dateRange: DateRange;

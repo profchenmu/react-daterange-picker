@@ -21,41 +21,40 @@ interface DayProps extends WithStyles<typeof styles> {
 	value: number | string;
 }
 
-const styles = (theme: Theme) =>
-	createStyles({
-		leftBorderRadius: {
-			borderRadius: "50% 0 0 50%"
-		},
-		rightBorderRadius: {
-			borderRadius: "0 50% 50% 0"
-		},
-		buttonContainer: {
-			display: "flex"
-		},
-		button: {
-			height: 36,
-			width: 36,
-			padding: 0
-		},
-		buttonText: {
-			lineHeight: 1.6
-		},
-		outlined: {
-			border: `1px solid ${theme.palette.primary.dark}`
-		},
-		filled: {
-			"&:hover": {
-				backgroundColor: theme.palette.primary.dark
-			},
+const styles = (theme: Theme) => ({
+	leftBorderRadius: {
+		borderRadius: "50% 0 0 50%"
+	},
+	rightBorderRadius: {
+		borderRadius: "0 50% 50% 0"
+	},
+	buttonContainer: {
+		display: "flex"
+	},
+	button: {
+		height: 36,
+		width: 36,
+		padding: 0
+	},
+	buttonText: {
+		lineHeight: 1.6
+	},
+	outlined: {
+		border: `1px solid ${theme.palette.primary.dark}`
+	},
+	filled: {
+		"&:hover": {
 			backgroundColor: theme.palette.primary.dark
 		},
-		highlighted: {
-			backgroundColor: theme.palette.action.hover
-		},
-		contrast: {
-			color: theme.palette.primary.contrastText
-		}
-	});
+		backgroundColor: theme.palette.primary.dark
+	},
+	highlighted: {
+		backgroundColor: theme.palette.action.hover
+	},
+	contrast: {
+		color: theme.palette.primary.contrastText
+	}
+});
 
 const Day: React.FunctionComponent<DayProps> = props => {
 	const { classes } = props;

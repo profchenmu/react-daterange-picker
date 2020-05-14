@@ -1,7 +1,6 @@
 import {
 	WithStyles,
 	Grid,
-	createStyles,
 	withStyles,
 	IconButton,
 	Select,
@@ -21,7 +20,7 @@ interface HeaderProps extends WithStyles<typeof styles> {
 	onClickPrevious: () => void;
 }
 
-const styles = createStyles({
+const styles = {
 	iconContainer: {
 		padding: 5
 	},
@@ -31,7 +30,7 @@ const styles = createStyles({
 			background: "none"
 		}
 	}
-});
+};
 
 const MONTHS = [
 	"Jan",
